@@ -10,12 +10,13 @@ RUN \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
   chown -R www-data:www-data /var/lib/nginx
 
-# Define mountable directories.
-#VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
+ Define mountable directories.
+VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
 
 # Define working directory.
 WORKDIR /etc/nginx
 
+COPY README.md /var/www/
 # Define default command.
 CMD ["nginx"]
 
