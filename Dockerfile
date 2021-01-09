@@ -17,7 +17,7 @@ VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/v
 WORKDIR /etc/nginx
 
 COPY README.md /var/www/
-# Define default command.
+# Define default command. MAZAFAKA
 CMD ["nginx"]
 
 # Expose ports.
