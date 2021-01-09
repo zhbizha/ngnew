@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: trovanmeta-dev
-        image: zhbiza/nginx:latest
+        image: zhbiza/nginx
         ports:
         - containerPort: 80
 
