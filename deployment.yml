@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trovanmeta-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trovanmeta-dev
+  template:
+    metadata:
+      labels:
+        app: trovanmeta-dev
+    spec:
+      containers:
+      - name: trovanmeta-dev
+        image: zhbiza/nginx:latest
+        ports:
+        - containerPort: 80
+
